@@ -23,7 +23,7 @@ function NavBar() {
     return (
         <motion.div className='font-mono flex justify-between py-5 px-24' initial={{y:"-20vh"}} animate={{y:"0"}} transition={{ duration: '1'}}> 
             <motion.div className="text-black font-bold text-3xl lowercase" onHoverStart={()=>setHover(true)} onHoverEnd={()=>setHover(false)}>
-                <div className='relative cursor-pointer'> jeanh {hover && <img className='h-3.5 absolute top-0 left-1' src={logoDetail}/> } </div> 
+                <div className='relative cursor-pointer'> jeanh {hover && <motion.img initial={{scale:0.1}} animate={{scale:1}} className='h-3.5 absolute top-0 left-1' src={logoDetail}/> } </div> 
             </motion.div>
 
 

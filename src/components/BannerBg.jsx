@@ -1,14 +1,20 @@
 import React from 'react'
-import background from  '../assets/rectangle1.png'
+import background from  '../assets/Rectangle.png'
+import { motion } from 'framer-motion';
 
 function BannerBg() {
   return (
     
-    <div className="flex flex-col justify-between gap-40 w-4/5 self-center mx-auto h-80vh  z-0 animate-shrinkingBackground font-mono"
-                style= {{ backgroundImage: `url(${background})`,
-                          opacity: 0.8,
-                }} 
-    ></div>
+    <div className="absolute flex justify-center w-full z-[-1]"> 
+
+        <motion.img 
+            initial={{scale: 1.5, opacity:1, zIndex: 3}}
+            animate={{scale: 1, opacity: 0.5, zIndex: -1}}
+            transition={{duration: 1, ease: "easeInOut"}}
+            className='opacity-50' src={background} 
+        />
+
+    </div>
   )
 }
 

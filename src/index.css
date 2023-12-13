@@ -47,7 +47,7 @@
 .animate-scrollText {
     transform: translateX(100vw);
     animation: scrollText 40s linear infinite;
-    animation-delay: 10s;
+    animation-delay: 3s;
   }
 
 
